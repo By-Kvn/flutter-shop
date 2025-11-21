@@ -1,0 +1,52 @@
+name: CI Simple (Tests + Build)
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-and-build:
+    name: Tests and Build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.38.2'
+          channel: 'stable'
+          cache: true
+      
+      - name: Install dependencies
+        run: flutter pub get
+      
+      - name: Generate code
+        run: flutter pub run build_runner build --delete-conflicting-outputs
+      
+      - name: Analyze code
+        run: flutter analyze --no-fatal-infos
+      
+      - name: Run tests
+        run: flutter test --coverage
+      
+      - name: Build web
+        run: flutter build web --release
+      
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-build
+          path: build/web/
+          retention-days: 7
+      
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        with:
+          files: coverage/lcov.info
+          fail_ci_if_error: false
+
