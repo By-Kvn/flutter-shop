@@ -2,6 +2,8 @@
 
 Application e-commerce Flutter avec authentification Firebase, architecture Clean/MVVM, et support multi-plateformes (Web, iOS, Android).
 
+> 🚀 **CI/CD activé** : Les tests et le déploiement sont automatisés via GitHub Actions !
+
 ## 🚀 Fonctionnalités
 
 - ✅ **Catalogue de produits** avec recherche et filtres par catégorie
