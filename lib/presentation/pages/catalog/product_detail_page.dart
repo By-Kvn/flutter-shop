@@ -94,6 +94,43 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
           leading: CupertinoNavigationBarBackButton(
             onPressed: () => context.pop(),
           ),
+          trailing: Consumer<CartViewModel>(
+            builder: (context, cart, _) {
+              return Stack(
+                children: [
+                  CupertinoButton(
+                    padding: EdgeInsets.zero,
+                    onPressed: () => context.go('/cart'),
+                    child: const Icon(CupertinoIcons.cart),
+                  ),
+                  if (cart.itemCount > 0)
+                    Positioned(
+                      right: 0,
+                      top: 0,
+                      child: Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: const BoxDecoration(
+                          color: Colors.red,
+                          shape: BoxShape.circle,
+                        ),
+                        constraints: const BoxConstraints(
+                          minWidth: 16,
+                          minHeight: 16,
+                        ),
+                        child: Text(
+                          '${cart.itemCount}',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 10,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                ],
+              );
+            },
+          ),
         ),
         child: SafeArea(
           child: _buildProductContent(),
@@ -106,6 +143,42 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
       appBar: AppBar(
         title: Text(_product.title),
         actions: [
+          Consumer<CartViewModel>(
+            builder: (context, cart, _) {
+              return Stack(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.shopping_cart),
+                    onPressed: () => context.go('/cart'),
+                  ),
+                  if (cart.itemCount > 0)
+                    Positioned(
+                      right: 0,
+                      top: 0,
+                      child: Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: const BoxDecoration(
+                          color: Colors.red,
+                          shape: BoxShape.circle,
+                        ),
+                        constraints: const BoxConstraints(
+                          minWidth: 16,
+                          minHeight: 16,
+                        ),
+                        child: Text(
+                          '${cart.itemCount}',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 10,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                ],
+              );
+            },
+          ),
           if (kIsWeb || defaultTargetPlatform == TargetPlatform.android)
             IconButton(
               icon: const Icon(Icons.share),
