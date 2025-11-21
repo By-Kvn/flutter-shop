@@ -43,8 +43,39 @@ class ShopFlutterApp extends StatelessWidget {
       child: MaterialApp.router(
         title: 'ShopFlutter',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xFF2196F3),
+            brightness: Brightness.light,
+          ),
+          cardTheme: CardThemeData(
+            elevation: 2,
+            shadowColor: Colors.black.withValues(alpha: 0.1),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          inputDecorationTheme: InputDecorationTheme(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            filled: true,
+            fillColor: Colors.grey.shade50,
+          ),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              elevation: 2,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+          ),
+          appBarTheme: const AppBarTheme(
+            elevation: 0,
+            centerTitle: false,
+          ),
+          typography: Typography.material2021(),
         ),
         routerConfig: appRouter,
       ),
