@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +56,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
 
   Future<void> _shareProduct() async {
     if (_product == null) return;
-    if (Platform.isAndroid || kIsWeb) {
+    if (kIsWeb || defaultTargetPlatform == TargetPlatform.android) {
       await Share.share(
         'Découvrez ${_product.title} pour ${_product.price}€ sur ShopFlutter!',
       );
@@ -88,7 +87,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
     if (_product == null) return const SizedBox();
 
     // iOS specific: Use CupertinoPageScaffold
-    if (Platform.isIOS) {
+    if (!kIsWeb && defaultTargetPlatform == TargetPlatform.iOS) {
       return CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
           middle: Text(_product.title),
@@ -107,7 +106,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
       appBar: AppBar(
         title: Text(_product.title),
         actions: [
-          if (Platform.isAndroid || kIsWeb)
+          if (kIsWeb || defaultTargetPlatform == TargetPlatform.android)
             IconButton(
               icon: const Icon(Icons.share),
               onPressed: _shareProduct,

@@ -11,9 +11,18 @@ import '../../presentation/pages/profile/profile_page.dart';
 
 final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
+// Mode test : désactiver l'authentification pour tester l'UI
+// Mettre à false pour réactiver l'authentification
+const bool _enableAuth = false;
+
 final GoRouter appRouter = GoRouter(
-  initialLocation: '/login',
+  initialLocation: _enableAuth ? '/login' : '/catalog',
   redirect: (context, state) {
+    // Si l'auth est désactivée, permettre l'accès à toutes les pages
+    if (!_enableAuth) {
+      return null;
+    }
+    
     final isLoggedIn = _firebaseAuth.currentUser != null;
     final isGoingToLogin = state.matchedLocation == '/login' ||
         state.matchedLocation == '/register';
