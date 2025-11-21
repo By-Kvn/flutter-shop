@@ -1,0 +1,116 @@
+[
+  {
+    "id": "1",
+    "title": "iPhone 15 Pro",
+    "price": 1199.99,
+    "thumbnail": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800"
+    ],
+    "description": "Le dernier iPhone avec puce A17 Pro, caméra ProRAW et design en titane.",
+    "category": "Electronics"
+  },
+  {
+    "id": "2",
+    "title": "MacBook Pro 16\"",
+    "price": 2499.99,
+    "thumbnail": "https://images.unsplash.com/photo-1541807084-5c52b6b3fef6?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1541807084-5c52b6b3fef6?w=800",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800"
+    ],
+    "description": "MacBook Pro 16 pouces avec puce M3 Max, écran Liquid Retina XDR.",
+    "category": "Electronics"
+  },
+  {
+    "id": "3",
+    "title": "AirPods Pro",
+    "price": 249.99,
+    "thumbnail": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=800"
+    ],
+    "description": "Écouteurs sans fil avec réduction active du bruit et audio spatial.",
+    "category": "Electronics"
+  },
+  {
+    "id": "4",
+    "title": "Nike Air Max 90",
+    "price": 129.99,
+    "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800"
+    ],
+    "description": "Baskets classiques avec amorti Air Max visible.",
+    "category": "Fashion"
+  },
+  {
+    "id": "5",
+    "title": "Samsung Galaxy S24",
+    "price": 899.99,
+    "thumbnail": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800"
+    ],
+    "description": "Smartphone Android avec écran AMOLED 6.2 pouces et triple caméra.",
+    "category": "Electronics"
+  },
+  {
+    "id": "6",
+    "title": "Sony WH-1000XM5",
+    "price": 399.99,
+    "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
+    ],
+    "description": "Casque audio sans fil avec réduction de bruit optimale.",
+    "category": "Electronics"
+  },
+  {
+    "id": "7",
+    "title": "Levi's 501 Jeans",
+    "price": 89.99,
+    "thumbnail": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=800"
+    ],
+    "description": "Jeans classiques coupe droite, intemporels.",
+    "category": "Fashion"
+  },
+  {
+    "id": "8",
+    "title": "iPad Pro 12.9\"",
+    "price": 1099.99,
+    "thumbnail": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800"
+    ],
+    "description": "Tablette professionnelle avec puce M2 et écran Liquid Retina.",
+    "category": "Electronics"
+  },
+  {
+    "id": "9",
+    "title": "Apple Watch Series 9",
+    "price": 429.99,
+    "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800"
+    ],
+    "description": "Montre connectée avec écran Always-On et puce S9.",
+    "category": "Electronics"
+  },
+  {
+    "id": "10",
+    "title": "Adidas Ultraboost 22",
+    "price": 179.99,
+    "thumbnail": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400",
+    "images": [
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800"
+    ],
+    "description": "Baskets de running avec amorti Boost et tige Primeknit.",
+    "category": "Fashion"
+  }
+]
+
