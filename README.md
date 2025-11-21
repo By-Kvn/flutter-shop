@@ -156,4 +156,4 @@ Pour une configuration complète de Firebase :
 
 ## 📄 Licence
 
-Ce projet est un rendu académique.
+Par KEVIN LABATTE
