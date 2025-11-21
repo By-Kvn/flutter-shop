@@ -13,7 +13,7 @@ final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
 // Mode test : désactiver l'authentification pour tester l'UI
 // Mettre à false pour réactiver l'authentification
-const bool _enableAuth = false;
+const bool _enableAuth = true;
 
 final GoRouter appRouter = GoRouter(
   initialLocation: _enableAuth ? '/login' : '/catalog',

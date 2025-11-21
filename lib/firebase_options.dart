@@ -26,26 +26,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'demo-api-key',
-    appId: '1:demo:web:demo',
-    messagingSenderId: 'demo',
-    projectId: 'shop-flutter-demo',
-    authDomain: 'shop-flutter-demo.firebaseapp.com',
-    storageBucket: 'shop-flutter-demo.appspot.com',
+    apiKey: 'AIzaSyACnYX8HE79nXBP2MGTxcS0571tG5FRPiQ',
+    appId: '1:278844489900:web:c03f690c64fe73dc295f09',
+    messagingSenderId: '278844489900',
+    projectId: 'flutter-72c45',
+    authDomain: 'flutter-72c45.firebaseapp.com',
+    storageBucket: 'flutter-72c45.firebasestorage.app',
+    measurementId: 'G-P5HJSR848G',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'demo-api-key',
-    appId: '1:demo:android:demo',
-    messagingSenderId: 'demo',
-    projectId: 'shop-flutter-demo',
+    apiKey: 'AIzaSyBV45kIlbbDQP_bNwhAF_LqROiR5Eaa7hg',
+    appId: '1:278844489900:android:348779b4f63ef20d295f09',
+    messagingSenderId: '278844489900',
+    projectId: 'flutter-72c45',
+    storageBucket: 'flutter-72c45.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'demo-api-key',
-    appId: '1:demo:ios:demo',
-    messagingSenderId: 'demo',
-    projectId: 'shop-flutter-demo',
+    apiKey: 'AIzaSyA_x9rfwaSuVt3BvUsd6mSW6rfkJHevIks',
+    appId: '1:278844489900:ios:27ebca117404c488295f09',
+    messagingSenderId: '278844489900',
+    projectId: 'flutter-72c45',
+    storageBucket: 'flutter-72c45.firebasestorage.app',
     iosBundleId: 'com.example.shopFlutter',
   );
 
@@ -57,4 +60,3 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.shopFlutter',
   );
 }
-
